@@ -3,6 +3,9 @@
 	<head>
 	</head>
 	<title>Pomodoro Timer</title>
+	<!--Bootstrap CSS-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
 	<link rel="stylesheet" type="text/css" href="pom.css">
 	<script src="app.js"></script>
 
@@ -10,22 +13,35 @@
 
 <h1>Pomodoro Timer</h1>
 
-<div id="pomodoro-container">
-	<div id="interval-container">
-		<div id="pom-int">Pomodoro</div>
-		<div id="short-interval">Short Break</div>
-		<div id="long-int">Long Break</div>
-	</div>
-	<div id="timer-container">
-		<p id="timer">25:00</p>
-		<div id="start"></div>
-		<div id="stop"></div>
-		<div id="reset"></div>
-	</div>
-	<div id="interval-counter"></div>
+<div class="container-fluid pomodoro-container">
+  <div class="row">
+    <div class="col" id="pom-btn">Pomodoro</div>
+    <div class="col" id="short-btn">Short Break</div>
+    <div class="col" id="long-btn">Long Break</div>
+  </div>
+  <div class="row">
+    <div class="col-2"></div>
+    <div class="col-8">25:00</div>
+    <div class="col-2"></div>
+  </div>
+  <div class="row">
+    <div class="col" id="start-btn">Start</div>
+    <div class="col" id="stop-btn">Stop</div>
+    <div class="col" id="reset">Reset</div>
+  </div>
+  <div class="row">
+    <div class="col" id="start-btn">About</div>
+    <div class="col" id="stop-btn">Tasks</div>
+    <div class="col" id="reset">Settings</div>
+  </div>
+</div>
 
 <!--functionality for tasks coming soon-->
 <!--functionality to change intervals coming soon-->
 </div>
+
+<!--Bootstrap JS START-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script> 
+<!--Bootstrap JS End-->
 </body>
 </html>
