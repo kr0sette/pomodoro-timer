@@ -3,42 +3,61 @@
 	<head>
 	</head>
 	<title>Pomodoro Timer</title>
-	<!--Bootstrap CSS-->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-
-	<link rel="stylesheet" type="text/css" href="pom.css">
-	<script src="app.js"></script>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Bitter&family=Public+Sans:wght@600&family=Rubik:wght@300&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="pom.css"/>
+	<script src="pom.js"></script>
 
 <body>
-
-<h1>Pomodoro Timer</h1>
-
 <div class="container-fluid pomodoro-container">
-  <div class="row">
-    <div class="col" id="pom-btn">Pomodoro</div>
-    <div class="col" id="short-btn">Short Break</div>
-    <div class="col" id="long-btn">Long Break</div>
-  </div>
-  <div class="row">
-    <div class="col-2"></div>
-    <div class="col-8">25:00</div>
-    <div class="col-2"></div>
-  </div>
-  <div class="row">
-    <div class="col" id="start-btn">Start</div>
-    <div class="col" id="stop-btn">Stop</div>
-    <div class="col" id="reset">Reset</div>
-  </div>
-  <div class="row">
-    <div class="col" id="start-btn">About</div>
-    <div class="col" id="stop-btn">Tasks</div>
-    <div class="col" id="reset">Settings</div>
-  </div>
-</div>
+	  <div class="row" id="title-container">
+	    <div class="col">
+	    	<h1>ポモドロ Timer</h1>
+	    </div>
+	   </div>
+	  <div class="row" id="top-bar">
+	    <div class="col"></div>
+	    <div class="col-2" id="about-btn">
+	    	<img class="icon" src="icons/black/about.png" />
+	    </div>
+	    <div class="col-2" id="settings-btn">
+	    	<img class="icon" src="icons/black/settings.png" />
+	    </div>
+	  </div>
+	  <div class="row" id="interval-types">
+	    <div class="col" id="work-btn">
+	    	<button type="button" class="btn">Work</button>
+	    </div>
+	    <div class="col" id="short-btn">
+	    	<button type="button" class="btn">Short</button>
+		</div>
+	    <div class="col" id="long-btn">
+	    	<button type="button" class="btn">Long</button>
+	    </div>
+	  </div>
+	  <div class="row" id="timer-container">
+	    <div class="col" id="timer">25:00</div>
+	  </div>
+	  <div class="row" id="timer-controls">
+	    <div class="col" id="start-btn">
+	    	<img class="cntrl-icon" src="icons/black/start.png" />
+	    </div>
+	    <div class="col" id="stop-btn">
+	    	<img class="cntrl-icon" src="icons/black/stop.png" />
+	    </div>
+	    <div class="col" id="reset">
+	    	<img class="cntrl-icon" src="icons/black/reset.png" />
+	    </div>
+	  </div>
+	  <div class="row" id="interval-countdown">
+	    <div class="col" id="interval-counter">Intervals until long break: 4</div>
+	  </div>
+	</div>
 
-<!--functionality for tasks coming soon-->
-<!--functionality to change intervals coming soon-->
-</div>
+	<!--functionality for tasks coming soon-->
+	<!--functionality to change intervals coming soon-->
+	</div>
 
 <!--Bootstrap JS START-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script> 

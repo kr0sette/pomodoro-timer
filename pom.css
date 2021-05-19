@@ -1,0 +1,82 @@
+/*orangey red - #f05a35*/
+
+
+body, .btn {
+	text-align: center;
+	font-family: 'Rubik', sans-serif;
+	letter-spacing: 0.1em;
+}
+
+
+/*div {
+	border: 1px solid black;
+
+}*/
+
+#title-container {
+	display: block;
+	float: left;
+	writing-mode: vertical-rl;
+	font-family: 'Bitter', serif;
+
+}
+
+#timer {
+	font-family: 'Public Sans', sans-serif;
+}
+
+
+/*X-Small devices (portrait phones, less than 576px)
+No media query for `xs` since this is the default in Bootstrap
+
+Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) { 
+	body, .btn {
+		font-size: 50px;
+	}
+
+	h1 {
+		font-size: 75px;
+	}
+
+	#timer {
+		font-size: 200px;
+	}
+
+	#interval-counter{
+		font-size: 40px;
+	}
+	.icon, .cntrl-icon{
+		width: 50px;
+	}
+	#title-container, h1 {
+		font-weight: bold;
+		padding: 55px 0 55px 0;
+	}
+
+	.container-fluid{
+		margin: 40px 100px 0 0;
+	}
+
+	#interval-types, #interval-countdown {
+		padding: 50px 0 0 0;
+	}
+
+	#top-bar, #interval-types, #timer-container, #timer-controls, #interval-countdown {
+		margin-right: 25px;
+	}
+
+ }
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) { ... }
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) { ... }
+
+/*X-Large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) { ... }
+
+/*XX-Large devices (larger desktops, 1400px and up)*/
+@media (min-width: 1400px) { ... }
+
