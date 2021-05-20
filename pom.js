@@ -1,6 +1,9 @@
-const startingMinutes = 1;
-/*let time = startingMinutes * 60;*/
+let startingMinutes = 25;
 let time = startingMinutes * 60;
+
+let workMinutes = 25;
+let shortMinutes = 5
+let longMinutes = 30;
 
 
 
@@ -10,6 +13,10 @@ const timerElement = document.getElementById('timer');
 const startElement = document.getElementById('start-btn');
 const stopElement = document.getElementById('stop-btn');
 const resetElement = document.getElementById('reset-btn');
+//Intervals
+const workElement = document.getElementById('work-btn');
+const shortElement = document.getElementById('short-btn');
+const longElement = document.getElementById('long-btn');
 
 //Display the starting time upon page load
 timerOnLoad();
@@ -18,8 +25,9 @@ function timerOnLoad () {
 }
 
 //Start countdown when you click start button
-var startCountdown
+let startCountdown
 startElement.onclick = function () {
+	clearInterval(startCountdown);
 	startCountdown = setInterval(countdown, 1000);
 };
 
@@ -35,6 +43,28 @@ resetElement.onclick = function () {
 	timerOnLoad();
 
 }
+
+//Detect when the work, short, or long button is being clicked & switch the interval type
+document.onclick = function () {
+	if (event.target === workElement){
+		switchIntervalType(workMinutes);
+	}
+	else if (event.target === shortElement) {
+		switchIntervalType(shortMinutes);
+	}
+	else if(event.target === longElement){
+		switchIntervalType(longMinutes);
+	}
+}
+
+//Switch interval type & reset the timer
+function switchIntervalType(type){
+		clearInterval(startCountdown);
+		startingMinutes = type;
+		time = startingMinutes * 60;
+		timerOnLoad();
+}
+
 
 //Handling countdown on timer
 function countdown(){
