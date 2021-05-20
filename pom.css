@@ -37,9 +37,11 @@ Small devices (landscape phones, 576px and up)*/
 
 	h1 {
 		font-size: 75px;
+		font-weight: bold;
 	}
 
 	#timer {
+
 		font-size: 200px;
 	}
 
@@ -49,9 +51,9 @@ Small devices (landscape phones, 576px and up)*/
 	.icon, .cntrl-icon{
 		width: 50px;
 	}
-	#title-container, h1 {
-		font-weight: bold;
-		padding: 55px 0 55px 0;
+	
+	#title-container {
+		padding: 100px 0 100px 0;
 	}
 
 	.container-fluid{
